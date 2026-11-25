@@ -67,3 +67,9 @@ The notebook combines a page-layout model, a vision-language model that reads te
 ## Acknowledgements
 
 Built on [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) (PP-DocLayout and PaddleOCR-VL), [PyMuPDF](https://github.com/pymupdf/PyMuPDF), [pandoc](https://pandoc.org/), [python-docx](https://github.com/python-openxml/python-docx) and [Pix2Text](https://github.com/breezedeus/Pix2Text) models.
+
+## License
+
+This project's code is released under the [MIT License](LICENSE). You are free to use it, change it and share it.
+
+The libraries and models it installs keep their own licenses. Most are permissive (MIT, Apache-2.0, BSD). Two are **AGPL-3.0**: PyMuPDF, used to read PDFs, and Ultralytics, used only by the CPU fallback. Running the notebook for your own work is unaffected. If you ship a product or run a public service built on this project, check the AGPL terms for those two (PyMuPDF is also sold under a commercial license by Artifex). See [TECHNICAL.md](TECHNICAL.md#third-party-licenses) for the full list.

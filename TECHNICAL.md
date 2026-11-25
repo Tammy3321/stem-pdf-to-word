@@ -122,3 +122,24 @@ Colab's preinstalled `langchain` is removed, because PaddleX imports a module th
 - Drawn chemical structures stay pictures. Structure-recognition models were considered but not used: a silently wrong molecule in a question bank is worse than a clean picture.
 - Complex tables (merged cells, formulas in cells) may need touching up.
 - Accuracy follows scan quality. The validation step reports doubtful pages, but proofreading is still recommended.
+
+## Third-party licenses
+
+This repository contains only original code (MIT, see [LICENSE](LICENSE)). Nothing below is bundled: the notebook installs packages from PyPI and downloads models from Hugging Face when it runs.
+
+| Component | Used for | License |
+|---|---|---|
+| PaddleOCR-VL-1.5 (model) | Reading text and equations | Apache-2.0 |
+| PP-DocLayout_plus-L (model) | Page layout | Apache-2.0 |
+| PaddlePaddle, PaddleOCR | Running the layout model | Apache-2.0 |
+| Pix2Text MFD/MFR 1.5 (models) | Formula detection and recognition (CPU engine) | MIT |
+| transformers, accelerate, huggingface_hub, tokenizers | Running PaddleOCR-VL | Apache-2.0 |
+| onnxruntime, onnx | Running the Pix2Text models | MIT, Apache-2.0 |
+| OpenCV | Image processing | Apache-2.0 |
+| python-docx | Writing the Word file | MIT |
+| lxml, Pillow | XML and images | BSD-3-Clause, MIT-CMU |
+| pypandoc_binary | Equation conversion (bundles the pandoc program) | MIT wrapper; pandoc is GPL-2.0-or-later, run as a separate process |
+| **PyMuPDF** | Rendering PDF pages, reading the PDF text layer | **AGPL-3.0** or commercial (Artifex) |
+| **Ultralytics** | Formula detector of the CPU engine only | **AGPL-3.0** or commercial |
+
+MIT code may be combined with AGPL-3.0 libraries. Anyone who distributes software built on this project, or offers it as a network service, must meet the AGPL-3.0 terms for PyMuPDF and Ultralytics, or hold commercial licenses for them.
